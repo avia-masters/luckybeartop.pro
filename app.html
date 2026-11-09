@@ -187,21 +187,28 @@
         .section-head a { color: #4ab8ff; }
         .section-head a:hover { color: #7acbff; }
 
-        /* ===== ПРЕВЬЮ ПРИЛОЖЕНИЯ ===== */
-        .app-preview {
+        /* ===== ПРЕВЬЮ ПРИЛОЖЕНИЯ (исправлено) ===== */
+        .app-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
             align-items: center;
         }
-        .app-preview img {
-            width: 100%; max-width: 480px; border-radius: 20px;
+        .app-preview {
+            background: rgba(17, 29, 53, 0.6);
             border: 1px solid rgba(26, 48, 80, 0.4);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-            display: block; margin: 0 auto;
+            border-radius: 24px;
+            padding: 30px;
+            text-align: center;
         }
-        .app-preview h2 { font-size: 30px; color: #ffffff; margin-bottom: 12px; }
-        .app-preview p { color: #d0e4f8; margin-bottom: 16px; }
-        .app-preview ul { margin: 0 0 20px 20px; color: #d0e4f8; }
-        .app-preview ul li { margin-bottom: 6px; }
+        .app-preview img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+            margin: 0 auto;
+            background: #0f2040;
+            object-fit: contain;
+        }
 
         /* ===== КАРТОЧКИ ПЛАТФОРМ ===== */
         .platform-grid {
@@ -372,7 +379,7 @@
             .content-layout { grid-template-columns: 1fr; }
             .toc-card { position: static; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            .app-preview { grid-template-columns: 1fr; }
+            .app-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -468,14 +475,14 @@
             </div>
         </section>
 
-        <!-- ===== ПРЕВЬЮ ===== -->
+        <!-- ===== ПРЕВЬЮ (исправлено: фото больше не сплющивается) ===== -->
         <section class="section">
-            <div class="container app-preview">
-                <img src="images/app-preview.png" alt="Приложение Lucky Bear Казино — экран регистрации" width="480" height="600" loading="lazy">
+            <div class="container app-grid">
                 <div>
-                    <h2>Мобильная версия и приложение Lucky Bear</h2>
-                    <p>Мобильное приложение Lucky Bear Казино (Лаки Бир) повторяет функционал полной версии сайта: регистрация, вход, пополнение, вывод, бонусы, слоты и live-казино. Интерфейс адаптирован под смартфон, а навигация упрощена для игры одной рукой.</p>
-                    <ul>
+                    <span class="eyebrow">Предпросмотр</span>
+                    <h2 style="font-size:28px;color:#ffffff;margin:8px 0 16px">Мобильный клиент Lucky Bear</h2>
+                    <p style="color:#d0e4f8;margin-bottom:16px">Приложение Lucky Bear Казино (Лаки Бир) повторяет функционал полной версии сайта: регистрация, вход, пополнение, вывод, бонусы, слоты и live-казино. Интерфейс адаптирован под смартфон, а навигация упрощена для игры одной рукой.</p>
+                    <ul style="margin:0 0 20px 20px;color:#d0e4f8">
                         <li>Быстрый вход и регистрация со смартфона.</li>
                         <li>Пополнение через СБП, Т-банк и карту.</li>
                         <li>Вывод на карту, СБП и USDT.</li>
@@ -483,6 +490,9 @@
                         <li>Слоты, live-казино и настольные игры.</li>
                     </ul>
                     <a class="btn primary" href="https://megaplay333.site/26JXJv" rel="nofollow sponsored">Установить</a>
+                </div>
+                <div class="app-preview">
+                    <img src="images/app-preview.png" alt="Приложение Lucky Bear Казино — экран регистрации" width="280" height="600" loading="lazy">
                 </div>
             </div>
         </section>
